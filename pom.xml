@@ -18,7 +18,7 @@
 
     <vertx.version>5.0.2</vertx.version>
     <junit-jupiter.version>5.9.1</junit-jupiter.version>
-    <log4j-version>2.24.0</log4j-version>
+    <log4j-version>2.25.1</log4j-version>
     <lombok-version>1.18.38</lombok-version>
 
     <main.verticle>tom.example.vertx.sample.MainVerticle</main.verticle>
@@ -91,7 +91,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-<!--      <scope>provided</scope>-->
+      <scope>provided</scope>
       <version>${lombok-version}</version>
     </dependency>
   </dependencies>
