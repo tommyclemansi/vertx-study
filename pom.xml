@@ -18,7 +18,7 @@
 
     <vertx.version>5.0.2</vertx.version>
     <junit-jupiter.version>5.9.1</junit-jupiter.version>
-    <log4j-version>2.12.4</log4j-version>
+    <log4j-version>2.24.0</log4j-version>
     <lombok-version>1.18.38</lombok-version>
 
     <main.verticle>tom.example.vertx.sample.MainVerticle</main.verticle>
@@ -76,10 +76,12 @@
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j2-impl</artifactId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -89,7 +91,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <scope>provided</scope>
+<!--      <scope>provided</scope>-->
       <version>${lombok-version}</version>
     </dependency>
   </dependencies>
