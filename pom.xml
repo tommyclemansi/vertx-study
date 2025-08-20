@@ -18,8 +18,10 @@
 
     <vertx.version>5.0.2</vertx.version>
     <junit-jupiter.version>5.9.1</junit-jupiter.version>
+    <log4j-version>2.12.4</log4j-version>
+    <lombok-version>1.18.38</lombok-version>
 
-    <main.verticle>tom.example.vertx.MainVerticle</main.verticle>
+    <main.verticle>tom.example.vertx.sample.MainVerticle</main.verticle>
     <launcher.class>io.vertx.launcher.application.VertxApplication</launcher.class>
   </properties>
 
@@ -32,9 +34,15 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-bom</artifactId>
+        <version>${log4j-version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
     </dependencies>
   </dependencyManagement>
-
   <dependencies>
     <dependency>
       <groupId>io.vertx</groupId>
@@ -44,7 +52,6 @@
       <groupId>io.vertx</groupId>
       <artifactId>vertx-launcher-application</artifactId>
     </dependency>
-
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-junit5</artifactId>
@@ -62,8 +69,26 @@
       <version>${junit-jupiter.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+      <version>${lombok-version}</version>
+    </dependency>
   </dependencies>
-
   <build>
     <plugins>
       <plugin>

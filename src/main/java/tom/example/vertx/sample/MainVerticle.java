@@ -1,4 +1,4 @@
-package tom.example.vertx;
+package tom.example.vertx.sample;
 
 import io.vertx.core.Future;
 import io.vertx.core.VerticleBase;
@@ -7,7 +7,8 @@ import io.vertx.core.Vertx;
 public class MainVerticle extends VerticleBase {
 
   public static void main(String[] args) {
-    Vertx.vertx().deployVerticle(new MainVerticle());
+    var vertx  = Vertx.vertx(); // Create a Vert.x instance (1 per application)
+    vertx.deployVerticle(new MainVerticle());
   }
 
   @Override
@@ -20,4 +21,8 @@ public class MainVerticle extends VerticleBase {
       System.out.println("HTTP server started on port 8888");
     });
   }
+
+
+  // 1 verticle = 1 Thread
+  // verticles are run on a non blocking event loop
 }

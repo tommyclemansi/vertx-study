@@ -1,4 +1,4 @@
-package tom.example.vertx;
+package tom.example.vertx.sample;
 
 import io.vertx.core.Vertx;
 import io.vertx.junit5.VertxExtension;
